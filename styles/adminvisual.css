@@ -1,0 +1,335 @@
+/* ===========================
+   COLORES PRINCIPALES
+=========================== */
+:root {
+    --azul-oscuro: #03045E;
+    --azul-medio: #0077B6;
+    --azul-cyan: #00B4D8;
+    --azul-claro: #90E0EF;
+
+    --verde: #2E7D32;
+    --rojo: #C62828;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.admin-nav {
+    background: var(--azul-oscuro);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+}
+
+.admin-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-links a.active {
+    border-bottom: 2px solid var(--azul-cyan);
+}
+
+.logout {
+    color: #ffdddd !important;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+    background-image: url("../assets/ImgsBanner/bogotanight.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 110px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+/* ===========================
+   STATS
+=========================== */
+.stats-container {
+    margin: 40px auto;
+    width: 90%;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.stat-card {
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.azul { background: var(--azul-medio); }
+.verde { background: var(--verde); }
+.rojo { background: var(--rojo); }
+
+.stat-card p {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* ===========================
+   REPORTE
+=========================== */
+.reporte-container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.reporte-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.reporte-titulo {
+    color: var(--azul-oscuro);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reporte-subtitulo {
+    color: var(--azul-medio);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.reporte-descripcion {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.reporte-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.reporte-lista li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   GRAFICO (CORREGIDO)
+=========================== */
+.grafico-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+.grafico {
+    width: 320px;
+    height: 320px;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+.btn-descargar {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.btn-descargar.azul {
+    background: var(--azul-medio);
+}
+
+.btn-descargar.verde {
+    background: var(--verde);
+}
+
+.btn-descargar:hover {
+    opacity: 0.8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* -------- TABLET -------- */
+@media (max-width: 992px) {
+
+  .admin-nav {
+    padding: 16px 24px;
+  }
+
+  .admin-links a {
+    margin-left: 14px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 90px 0;
+  }
+
+  .stats-container {
+    gap: 18px;
+  }
+
+  .stat-card p {
+    font-size: 2.1rem;
+  }
+
+  .reporte-card {
+    padding: 28px;
+  }
+
+  .reporte-titulo {
+    font-size: 1.8rem;
+  }
+
+  .reporte-subtitulo {
+    font-size: 1.3rem;
+  }
+
+  .grafico {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+
+  .admin-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .admin-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .admin-links a {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-card p {
+    font-size: 1.9rem;
+  }
+
+  .reporte-container {
+    width: 95%;
+  }
+
+  .reporte-card {
+    padding: 22px;
+  }
+
+  .reporte-titulo {
+    font-size: 1.6rem;
+  }
+
+  .reporte-subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .reporte-lista li {
+    font-size: 1rem;
+  }
+
+  .grafico {
+    width: 240px;
+    height: 240px;
+  }
+
+  .btn-descargar {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+/* -------- SMALL MOBILE -------- */
+@media (max-width: 480px) {
+
+  .admin-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-links a {
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card p {
+    font-size: 1.6rem;
+  }
+
+  .reporte-titulo {
+    font-size: 1.4rem;
+  }
+
+  .reporte-subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .grafico {
+    width: 200px;
+    height: 200px;
+  }
+}

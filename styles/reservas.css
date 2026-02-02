@@ -1,0 +1,396 @@
+:root {
+  --color-primary-dark: #03045E;
+  --color-primary: #1012D7;
+  --color-accent: #0077B6;
+  --color-soft-yellow: #FFE8A3;
+  --color-green: #1E7424;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.modal-header{
+      background: linear-gradient(
+        135deg,
+        var(--color-primary-dark),
+        var(--color-primary)
+    ) !important;
+
+}
+
+.top-bar {
+  background: var(--color-primary);
+}
+
+
+.btn-soft-yellow {
+  background: var(--color-soft-yellow);
+  color: var(--color-primary-dark);
+}
+
+.btn-soft-yellow:hover {
+  background: #ffe080;
+}
+
+
+.room-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.favorite-btn:hover {
+  background: var(--color-soft-yellow);
+}
+
+.favorite-btn.active {
+  color: red;
+  transform: scale(1.2);
+}
+
+#modalReserva .form-label {
+  font-weight: 600;
+}
+
+#modalReserva h6 {
+  color: #0d6efd;
+  border-bottom: 2px solid #e8e8e8;
+  padding-bottom: 4px;
+}
+
+.serv-adicional {
+  transform: scale(1.1);
+  margin-right: 6px;
+}
+
+.overlay-no-disponible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 22px;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.15);
+}
+
+.favorite-btn.favorito {
+  color: #C62828; /* rojito */
+}
+
+#btnConfirmarReserva {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary-dark),
+        var(--color-primary)
+    );
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+#btnConfirmarReserva:hover {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-accent)
+    );
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(16, 18, 215, 0.35);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLET (≤ 992px) */
+@media (max-width: 992px) {
+
+  .room-img {
+    height: 160px;
+  }
+
+  .room-card {
+    border-radius: 12px;
+  }
+
+  .favorite-btn {
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+  }
+
+  #modalReserva .modal-dialog {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Cards */
+  .room-img {
+    height: 140px;
+  }
+
+  .room-card {
+    margin-bottom: 1rem;
+  }
+
+  .favorite-btn {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  /* Overlay no disponible */
+  .overlay-no-disponible {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Modal */
+  #modalReserva .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  #modalReserva .modal-content {
+    border-radius: 12px;
+  }
+
+  #modalReserva h6 {
+    font-size: 15px;
+  }
+
+  #modalReserva .form-label {
+    font-size: 13px;
+  }
+
+  /* Botón confirmar */
+  #btnConfirmarReserva {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+
+  .room-img {
+    height: 120px;
+  }
+
+  .favorite-btn {
+    top: 6px;
+    right: 6px;
+    font-size: 16px;
+  }
+
+  .overlay-no-disponible {
+    font-size: 1rem;
+  }
+
+  #modalReserva .modal-header h5 {
+    font-size: 16px;
+  }
+
+  #btnConfirmarReserva {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* ---------- TABLET (≤ 992px) ---------- */
+@media (max-width: 992px) {
+
+  .room-card {
+    border-radius: 13px;
+  }
+
+  .room-img {
+    height: 160px;
+  }
+
+  .favorite-btn {
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  #modalReserva .modal-dialog {
+    max-width: 96%;
+    margin: 1rem auto;
+  }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Cards */
+  .room-card {
+    margin-bottom: 1rem;
+  }
+
+  .room-img {
+    height: 140px;
+  }
+
+  .room-card:hover {
+    transform: none;
+  }
+
+.titulo {
+  color: #0d6efd;
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+
+  /* Favoritos */
+  .favorite-btn {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  /* Overlay no disponible */
+  .overlay-no-disponible {
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  /* Modal */
+  #modalReserva .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  #modalReserva .modal-content {
+    border-radius: 12px;
+  }
+
+  #modalReserva h6 {
+    font-size: 15px;
+  }
+
+  #modalReserva .form-label {
+    font-size: 13px;
+  }
+
+  /* Botón confirmar */
+  #btnConfirmarReserva {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+  .room-img {
+    height: 120px;
+  }
+
+  .favorite-btn {
+    top: 6px;
+    right: 6px;
+    font-size: 16px;
+  }
+
+  .overlay-no-disponible {
+    font-size: 1rem;
+  }
+
+  #modalReserva .modal-header h5 {
+    font-size: 16px;
+  }
+
+  #btnConfirmarReserva {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
+
+
+/* ---------- TOUCH DEVICES ---------- */
+@media (hover: none) {
+
+  .room-card:hover {
+    transform: none;
+  }
+
+  .favorite-btn:hover {
+    transform: none;
+    background: white;
+  }
+
+  #btnConfirmarReserva:hover {
+    box-shadow: none;
+    transform: none;
+  }
+}

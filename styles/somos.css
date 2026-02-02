@@ -1,0 +1,150 @@
+/* ==== CONTENEDORES ELEGANTES DE SECCIONES ==== */
+.section-box {
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover suave estilo Airbnb */
+.section-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* TITULOS */
+ .section-box h2 {
+    color: #0056b3; 
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+} 
+
+/* PÁRRAFOS */
+/* .section-box p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin: 0;
+} */
+
+/* Animación suave al cargar */
+.section-box {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================
+   CONTENEDOR PRINCIPAL DE LA TARJETA
+============================ */
+.card-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ============================
+   TARJETA INTERACTIVA
+============================ */
+.card {
+  width: 100%;
+  height: 360px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+/* ============================
+   CARAS DE LA TARJETA
+============================ */
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background: #f8f9fa;
+}
+
+/* ============================
+   IMAGEN REDONDA DEL EQUIPO
+============================ */
+.card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #0d6efd;
+}
+
+
+/* ============================
+  4 CARDS EN LÍNEA
+============================ */
+
+/* Centra las columnas y corrige tamaños */
+#equipo .col-md-3,
+#equipo .col-lg-3,
+#equipo .col-sm-6 {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Ajuste para que siempre se comporten bien y no cambien de tamaño */
+.card-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+}
+
+/* --- COLOCAR ESTO AL FINAL DEL CSS --- */
+.icon-btn {
+  width: 60px !important;
+  height: 60px !important;
+  margin: 5px !important;
+}
+
+.icon-btn:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
